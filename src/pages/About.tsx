@@ -1,9 +1,5 @@
-import React from 'react';
+import React from "react";
 
-export default function About() {
-  return (
-    <div className="text-center">
-      App about
-    </div>
-  );
+export default function About(): JSX.Element {
+  return <div className="text-center">App about</div>;
 }

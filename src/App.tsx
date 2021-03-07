@@ -1,26 +1,19 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import routes from "./routes"
+import routes from "./routes";
 import Navbar from "./components/Navbar";
 
-function App() {
+function App(): JSX.Element {
   return (
     <Router>
       <Navbar routes={routes} />
       <div>
         <Switch>
-          {routes.map((route, index) => (
-            <Route
-              key={index}
-              path={route.path}
-              exact={route.exact}
-              children={<route.page />}
-            />
+          {routes.map((route) => (
+            <Route key={route.name} path={route.path} exact={route.exact}>
+              <route.page />
+            </Route>
           ))}
         </Switch>
       </div>

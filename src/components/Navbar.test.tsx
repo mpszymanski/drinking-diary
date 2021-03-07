@@ -1,9 +1,9 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import Navbar from './Navbar';
-import {MemoryRouter} from "react-router-dom";
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
+import Navbar from "./Navbar";
 
-test('renders navbar', () => {
+test("renders navbar", () => {
   render(
     <MemoryRouter>
       <Navbar routes={[]} />

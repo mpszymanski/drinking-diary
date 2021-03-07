@@ -1,18 +1,16 @@
-import React from 'react';
-import {Link} from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 
 import Route from "../interfaces/Route";
 
-export default function Navbar(props: NavbarProps) {
-  const { routes } = props
+export default function Navbar(props: NavbarProps): JSX.Element {
+  const { routes } = props;
   return (
     <div>
-      <div>
-        Drinking Diary
-      </div>
+      <div>Drinking Diary</div>
       <nav>
         <ul>
-          {routes.map((route, index) => (
+          {routes.map((route) => (
             <li>
               <Link to={route.path}>{route.name}</Link>
             </li>
@@ -24,5 +22,5 @@ export default function Navbar(props: NavbarProps) {
 }
 
 interface NavbarProps {
-  routes: Route[]
+  routes: Route[];
 }

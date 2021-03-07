@@ -1,9 +1,5 @@
-import React from 'react';
+import React from "react";
 
-export default function Home() {
-  return (
-    <div className="text-center">
-      App home
-    </div>
-  );
+export default function Home(): JSX.Element {
+  return <div className="text-center">App home</div>;
 }
