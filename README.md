@@ -1,14 +1,12 @@
-# Emotion Diary
+# Drinking Diary
 
-Simple application allowing you to track your dominant emotions. 
+Simple application allowing you to track your drinking habits and make sure you are drinking safely. 
 
 [MVP] user stories:
-- As a User, I want to assign one dominant emotion for the morning, afternoon, and evening choosing from Anger, 
-  Sadness, Joy, Anxiety, Shame, and feeling guilty, so I can create my emotion diary entry.
-- As a User, I want to review past entries, so I can remind emotions from the past
-- As a User, I want to amand past entries, so I can update them if I make mistake.
-- As a User, I want to see a report that will let me know what was my dominant emotion during the past week, 
-  month or year, so I can check on my wellbeing,
+- As a User, I want to add number of drinks that I consume each day of the week, so I can be aware how much I drink.
+- As a user, I want to get information about the weekly and daily limits for safe drinking, so I will know I do not drink risky.
+- As a User, I want to choose my gender, so I get accurate drinking limits.
+- As a User, I want to see past weeks, so i can review past drinking events.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
