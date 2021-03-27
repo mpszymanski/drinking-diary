@@ -11,7 +11,7 @@ export default function Navbar(props: NavbarProps): JSX.Element {
       <nav>
         <ul>
           {routes.map((route) => (
-            <li>
+            <li key={route.name}>
               <Link to={route.path}>{route.name}</Link>
             </li>
           ))}

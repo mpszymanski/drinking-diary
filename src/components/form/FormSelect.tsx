@@ -9,7 +9,9 @@ export default function FormSelect(props: SelectProps): JSX.Element {
   };
 
   const selectOptions = options.map((option) => (
-    <option value={option.value}>{option.label}</option>
+    <option value={option.value} key={option.label}>
+      {option.label}
+    </option>
   ));
 
   return (
