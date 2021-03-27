@@ -1,9 +1,9 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Settings from "./Settings";
+import AboutPage from "./AboutPage";
 
 test("renders settings page", () => {
-  render(<Settings />);
-  const linkElement = screen.getByText(/App settings/i);
+  render(<AboutPage />);
+  const linkElement = screen.getByText(/App about/i);
   expect(linkElement).toBeInTheDocument();
 });

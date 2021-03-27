@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Route from "../interfaces/Route";
+import RouteInterface from "../../app/Route.interface";
 
 export default function Navbar(props: NavbarProps): JSX.Element {
   const { routes } = props;
@@ -22,5 +22,5 @@ export default function Navbar(props: NavbarProps): JSX.Element {
 }
 
 interface NavbarProps {
-  routes: Route[];
+  routes: RouteInterface[];
 }
