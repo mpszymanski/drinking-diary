@@ -1,9 +1,13 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { createStore } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
 import rootReducer from "./rootReducer";
+import { loadState, saveState } from "./localStorage";
 
-const store = configureStore({
-  reducer: rootReducer,
+const persistedState = loadState();
+const store = createStore(rootReducer, persistedState);
+
+store.subscribe(() => {
+  saveState(store.getState());
 });
 
 export type AppDispatch = typeof store.dispatch;

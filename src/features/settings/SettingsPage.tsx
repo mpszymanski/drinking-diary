@@ -1,15 +1,16 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import FormSelect from "../../components/form/FormSelect";
 import { SelectOption } from "../../components/form/FormSelect.interface";
 import { setGender, setDarkMode } from "./settingsSlice";
 import { RootState } from "../../app/rootReducer";
+import { useAppDispatch } from "../../app/store";
 
 export default function SettingsPage(): JSX.Element {
   const gender = useSelector((state: RootState) => state.settings.gender);
   const darkMode = useSelector((state: RootState) => state.settings.darkMode);
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const genderOptions: SelectOption[] = [
     { value: "M", label: "Male" },

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import RouteInterface from "../../app/Route.interface";
+import RouteInterface from "../../Route.interface";
 
 export default function Navbar(props: NavbarProps): JSX.Element {
   const { routes } = props;

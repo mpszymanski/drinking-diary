@@ -1,7 +1,7 @@
 import React from "react";
-import DiaryEntryPage from "../features/diaryEntry/DiaryEntryPage";
-import SettingsPage from "../features/settings/SettingsPage";
-import AboutPage from "../features/about/AboutPage";
+import DiaryEntryPage from "./features/diaryEntry/DiaryEntryPage";
+import SettingsPage from "./features/settings/SettingsPage";
+import AboutPage from "./features/about/AboutPage";
 import Route from "./Route.interface";
 
 const routes: Route[] = [

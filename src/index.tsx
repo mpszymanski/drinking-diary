@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import store from "./app/store";
 import "./index.css";
-import App from "./app/App";
+import App from "./App";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 
@@ -31,5 +31,5 @@ serviceWorkerRegistration.register();
 reportWebVitals();
 
 if (process.env.NODE_ENV === "development" && module.hot) {
-  module.hot.accept("./app/App", render);
+  module.hot.accept("./App", render);
 }
