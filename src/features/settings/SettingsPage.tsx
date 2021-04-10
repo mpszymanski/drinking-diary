@@ -26,21 +26,28 @@ export default function SettingsPage(): JSX.Element {
   return (
     <div>
       <Header>App settings</Header>
-      <FormSelect
-        name="gender"
-        label="Gender"
-        value={gender}
-        options={genderOptions}
-        onSelect={(value: string) => dispatch(setGender(value))}
-      />
 
-      <FormSelect
-        name="dark-mode"
-        label="Dark mode"
-        value={darkMode}
-        options={darkModeOptions}
-        onSelect={(value: string) => dispatch(setDarkMode(parseInt(value, 10)))}
-      />
+      <div className="mb-4">
+        <FormSelect
+          name="gender"
+          label="Gender"
+          value={gender}
+          options={genderOptions}
+          onSelect={(value: string) => dispatch(setGender(value))}
+        />
+      </div>
+
+      <div className="mb-4">
+        <FormSelect
+          name="dark-mode"
+          label="Dark mode"
+          value={darkMode}
+          options={darkModeOptions}
+          onSelect={(value: string) =>
+            dispatch(setDarkMode(parseInt(value, 10)))
+          }
+        />
+      </div>
     </div>
   );
 }

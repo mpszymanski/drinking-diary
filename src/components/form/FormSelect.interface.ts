@@ -1,4 +1,6 @@
-export interface SelectProps {
+import DefaultProps from "../DefaultProps.interface";
+
+export interface SelectProps extends DefaultProps {
   label: string;
   name: string;
   value: string | number;

@@ -1,8 +1,10 @@
 import React, { ChangeEvent } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { SelectProps } from "./FormSelect.interface";
 
 export default function FormSelect(props: SelectProps): JSX.Element {
-  const { options, label, name, value, onSelect } = props;
+  const { options, label, name, value, onSelect, className } = props;
 
   const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
     onSelect(event.target.value);
@@ -15,9 +17,12 @@ export default function FormSelect(props: SelectProps): JSX.Element {
   ));
 
   return (
-    <label htmlFor={name}>
-      <span data-testid="form-label">{label}</span>
+    <label htmlFor={name} className={`block relative ${className}`}>
+      <span data-testid="form-label" className="block text-sm">
+        {label}
+      </span>
       <select
+        className="block w-full border border-gray-300 bg-white rounded px-2 py-2"
         data-testid="form-select"
         id={name}
         name={name}
@@ -26,6 +31,9 @@ export default function FormSelect(props: SelectProps): JSX.Element {
       >
         {selectOptions}
       </select>
+      <span className="absolute bottom-0 right-0 py-2 px-4 pointer-events-none">
+        <FontAwesomeIcon icon={faCaretDown} />
+      </span>
     </label>
   );
 }
