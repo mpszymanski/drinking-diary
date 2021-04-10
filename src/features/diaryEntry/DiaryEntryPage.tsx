@@ -1,5 +1,10 @@
 import React from "react";
+import Header from "../../components/layout/Header";
 
 export default function DiaryEntryPage(): JSX.Element {
-  return <div className="text-center">App home</div>;
+  return (
+    <div>
+      <Header>App home</Header>
+    </div>
+  );
 }
