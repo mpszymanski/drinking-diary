@@ -6,18 +6,20 @@ import Navbar from "./components/layout/Navbar";
 
 function App(): JSX.Element {
   return (
-    <Router>
-      <Navbar routes={routes} />
-      <div>
-        <Switch>
-          {routes.map((route) => (
-            <Route key={route.name} path={route.path} exact={route.exact}>
-              <route.page />
-            </Route>
-          ))}
-        </Switch>
-      </div>
-    </Router>
+    <div className="relative w-screen h-screen bg-gray-50 flex flex-col md:flex-col-reverse">
+      <Router>
+        <div className="flex-1">
+          <Switch>
+            {routes.map((route) => (
+              <Route key={route.name} path={route.path} exact={route.exact}>
+                <route.page />
+              </Route>
+            ))}
+          </Switch>
+        </div>
+        <Navbar routes={routes} />
+      </Router>
+    </div>
   );
 }
 
