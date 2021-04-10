@@ -22,7 +22,7 @@ export default function FormSelect(props: SelectProps): JSX.Element {
         {label}
       </span>
       <select
-        className="block w-full border border-gray-300 bg-white rounded px-2 py-2"
+        className="block w-full border border-gray-300 appearance-none bg-white rounded px-2 py-2"
         data-testid="form-select"
         id={name}
         name={name}
