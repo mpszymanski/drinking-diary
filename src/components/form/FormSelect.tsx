@@ -16,8 +16,14 @@ export default function FormSelect(props: SelectProps): JSX.Element {
 
   return (
     <label htmlFor={name}>
-      {label}
-      <select id={name} name={name} value={value} onChange={handleChange}>
+      <span data-testid="form-label">{label}</span>
+      <select
+        data-testid="form-select"
+        id={name}
+        name={name}
+        value={value}
+        onChange={handleChange}
+      >
         {selectOptions}
       </select>
     </label>
